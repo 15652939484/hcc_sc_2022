@@ -48,7 +48,7 @@ s.genes <- symb2ens[s.genes]
 s.genes <- s.genes[s.genes %in% rownames(sharma)]
 g2m.genes <- cc.genes$g2m.genes
 g2m.genes <- symb2ens[g2m.genes]
-g2m.genes <- g2m.genes[s.genes %in% rownames(sharma)]
+g2m.genes <- g2m.genes[g2m.genes %in% rownames(sharma)]
 sharma <- CellCycleScoring(sharma, s.features = s.genes, g2m.features = g2m.genes, set.ident = FALSE)
 DefaultAssay(sharma) <- "SCT"
 
